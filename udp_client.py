@@ -13,7 +13,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.settimeout(5)
 
 # Set the remote device IP and port
-server_address = (SERVER_IP, SERVER_PORT)
+server_address = (input("Enter the embedded device's IP address: "), SERVER_PORT)
 
 # Send the message "INIT" to the remote device
 sock.sendto(b'INIT', server_address)
